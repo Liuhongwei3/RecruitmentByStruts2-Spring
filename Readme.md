@@ -2,6 +2,7 @@
 <a href="https://liuhongwei3.github.io"><img alt="Author" src="https://img.shields.io/badge/Author-Tadm-pink.svg?style=flat-square"/></a>
 <img alt="License" src="https://img.shields.io/apm/l/vim-mode?style=flat-square"/>
 </p>
+
 # Explanation
 此项目是期末大作业代码，后端逻辑改自github某项目，前端个人进行了部分优化，并加入了spring框架整合，将action交由spring管理。
 主要是针对javaEE开发、后端熟练度以及前端优化学习。可能部分仍有缺陷，后续进行完善
