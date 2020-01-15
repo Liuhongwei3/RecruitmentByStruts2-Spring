@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+
+<struts>
+
+	<package name="registratin" extends="struts-default">
+		
+		<action name="user_registration" class="userRegistration">
+			<result name="input">/user_registration.jsp</result>
+			<result name="success">/user_login.jsp</result>
+		</action>
+		
+		<action name="company_registration" class="companyRegistration">
+			<result name="input">/company_registration.jsp</result>
+			<result name="success">/company_login.jsp</result>
+		</action>
+	</package>
+	
+	<package name="login" extends="struts-default">
+		<action name="user_login" class="userLoginAction" method="user_login">
+			<result name="input">/user_login.jsp</result>
+			<result name="success">/index.jsp</result>
+		</action>
+		<action name="company_login" class="userLoginAction" method="company_login">
+			<result name="input">/company_login.jsp</result>
+			<result name="success">/index.jsp</result>
+		</action>
+
+	</package>
+	
+	<package name="user_logout" extends="struts-default">
+		<action name="logout" class="logout">
+			<result name="input">./index.jsp</result>
+			<result name="success">./index.jsp</result>
+		</action>
+	</package>
+	
+	<package name="userinfo" extends="struts-default">
+		<action name="AddBio" class="editBio">
+			<result name="input">./edit_bio.jsp</result>
+			<result name="success">./index.jsp</result>
+		</action>
+		<action name="EditProfile" class="editProfile">
+			<result name="input">./edit_profile.jsp</result>
+			<result name="success">./index.jsp</result>
+		</action>
+	</package>
+	
+	<package name="business" extends="struts-default">
+		<action name="collection" class="collectionWork">
+			<result name="success">/collection.jsp</result>
+		</action>
+		<action name="addcollect" class="collectionWork" method="addcollect">
+			<result name="input">/index.jsp</result>
+			<result name="success" type="chain">collection</result>
+		</action>
+		<action name="ListBio" class="userListBio">
+			<result name="success">/userbio.jsp</result>
+		</action>
+		<action name="lookbio" class="editBio" method="lookBio">
+			<result name="input" type="chain">ListBio</result>
+			<result name="success">/lookselfbio.jsp</result>
+		</action>
+		<action name="getbio" class="editBio" method="searchbio">
+			<result name="success">./lookselfbio.jsp</result>
+		</action>
+		<action name="editbio" class="editBio" method="editbio">
+			<result name="input" type="chain">ListBio</result>
+			<result name="success" type="chain">ListBio</result>
+		</action>
+		<action name="deletebio" class="editBio" method="delete">
+			<result name="input" type="chain">ListBio</result>
+			<result name="success" type="chain">ListBio</result>
+		</action>
+		<action name="deliver" class="deliverBio">
+			<result name="input">./index.jsp</result>
+			<result name="success" type="redirect">/index.jsp</result>
+		</action>
+		
+		<action name="getjobinfo" class="deliverBio" method="getInfo">
+			<result name="input">/index.jsp</result>
+			<result name="success">/delivery.jsp</result>
+		</action>
+		
+		<action name="getallinfo" class="deliverBio" method="getAllWorkInfo">
+			<result name="success">/delivery.jsp</result>
+		</action>
+		
+		
+		<action name="ListMessage" class="listMessage">
+			<result name="input">/index.jsp</result>
+			<result name="success">/message.jsp</result>
+		</action>
+	</package>
+
+</struts>
