@@ -20,7 +20,8 @@ C3P0/Druid
 Struts2+Spring
 ## 前端框架：     	
 layui & bootstrap(部分)
-## 相应jar包:      	
+## 相应jar包:
+```
 c3p0-0.9.2-pre5.jar
 commons-beanutils-1.8.3.jar
 commons-dbutils-1.6.jar
@@ -59,3 +60,4 @@ spring-web-4.0.0.RELEASE.jar
 spring-webmvc-4.0.0.RELEASE.jar
 spring-webmvc-portlet-4.0.0.RELEASE.jar
 spring-websocket-4.0.0.RELEASE.jar
+```
